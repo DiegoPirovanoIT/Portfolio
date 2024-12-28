@@ -1,0 +1,121 @@
+:root {
+    --square-color: #0529108c;
+    --square-color-hov: #051d0c;
+}
+
+.disable-scrollbar {
+    height: 100%;
+    width: 100%;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    position: relative; /* Change from 'fixed' to 'relative' */
+    width: 100%;
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+a {
+    color: #3498db;
+}
+
+h2 {
+    font-size: min(120%, 6vw);
+}
+
+p, a {
+    font-size: 60%;
+}
+
+/* Grid container */
+.grid-container {
+    margin: auto;
+    display: grid;
+    grid-gap: 3vw;
+    margin-top: 5vh;
+    height: 90%;
+    width: 100vw;
+    max-width: 1000px;
+}
+
+.grid-item {
+    background-color: var(--square-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 30px;
+    flex-direction: column;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.grid-item:hover {
+    background-color: var(--square-color-hov);
+    transform: translateY(-10px) scale(1.1);
+}
+
+.center-square img {
+    width: 30%;
+    border-radius: 20px;
+}
+
+.grid-item > * {
+    display: block;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+#more-info {
+    padding: 10% 0;
+    width: 100%;
+    height:100%;
+    margin-top: 20vh; /* Ensuring it's far enough down */
+    
+
+    .content{
+        margin: auto;
+        
+        width: 80%;
+        height: 90%;
+        background-color: var(--square-color);
+    }
+
+}
+
+.english-text {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 799px) {
+    .grid-container {
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .grid-item:nth-child(5) {
+        grid-column: span 2;
+    }
+}
