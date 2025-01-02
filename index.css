@@ -3,24 +3,6 @@
     --square-color-hov: #051d0c;
 }
 
-.disable-scrollbar {
-    height: 100%;
-    width: 100%;
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
-    overflow-y: hidden;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-/* General styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body, html {
     height: 100%;
@@ -34,22 +16,56 @@ a {
     color: #3498db;
 }
 
+h1{
+    font-size: min(50px, 7vw);
+}
 h2 {
-    font-size: min(120%, 6vw);
+    font-size: min(35px, 5vw);
 }
 
-p, a {
-    font-size: 60%;
+.flags {
+    margin-top: 0.5vh;
+    
+}
+
+.box {
+    display: inline-block;
+    perspective: 200px;
+    transform-origin: 50% 100%;
+}
+
+
+.flag {
+    margin-left: 1vw;
+    cursor: pointer;
+    width: 25vw;
+    max-width: 100px;
+    height: 10%;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.42) 0px 15px 12px;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+}
+
+.language-non-selected {
+    
+    opacity: 30%; /* Initial transparency */
+    transform: rotateX(40deg); /* Initial 3D rotation */
+    
+}
+
+.language-non-selected:hover {
+    opacity: 100%; /* Fully opaque on hover */
 }
 
 /* Grid container */
 .grid-container {
     margin: auto;
     display: grid;
-    grid-gap: 3vw;
-    margin-top: 5vh;
+    grid-gap: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 0px;
     height: 90%;
-    width: 100vw;
+    width: 95vw;
     max-width: 1000px;
 }
 
@@ -59,11 +75,13 @@ p, a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
     border-radius: 30px;
     flex-direction: column;
     cursor: pointer;
     transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+    h1,h2{
+        margin: 1vw;
+    }
 }
 
 .grid-item:hover {
@@ -72,8 +90,8 @@ p, a {
 }
 
 .center-square img {
-    width: 30%;
-    border-radius: 20px;
+    width: 40%;
+    border-radius: 25px;
 }
 
 .grid-item > * {
@@ -87,9 +105,8 @@ p, a {
     width: 100%;
     height:100%;
     margin-top: 20vh; /* Ensuring it's far enough down */
-    
 
-    .content{
+    .description{
         margin: auto;
         
         width: 80%;
@@ -99,13 +116,16 @@ p, a {
 
 }
 
+.disabled{
+    display: none;
+}
 .english-text {
     display: none;
 }
 
 @media (min-width: 800px) {
     .grid-container {
-        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-template-columns: 1fr 1.4fr 1fr;
         grid-template-rows: repeat(3, 1fr);
     }
 }
