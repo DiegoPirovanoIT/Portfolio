@@ -21,9 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
 function goToMoreInfo(value) {
     document.getElementById("more-info").classList.remove("disabled");
     clearTimeout(removeDescriptionTimeOut);
-    document.getElementById('more-info').scrollIntoView({
-        behavior: 'smooth'
-    });
+
+    document.querySelector('.top').scrollIntoView({behavior: 'smooth'});
+    document.getElementById('more-info').scrollIntoView({behavior: 'smooth'});
+
     for (let i = 0; i < content_description.length; i++) {
         const desc = content_description[i];
         if (desc.classList.contains(value)) {

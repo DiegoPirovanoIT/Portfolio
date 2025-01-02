@@ -1,7 +1,7 @@
 const boxes = document.querySelectorAll('.box'); // Target the parent boxes
 const testi_italiani = document.querySelectorAll(".it")
 const testi_inglesi = document.querySelectorAll(".en")
-let LANG_SEL = "it"; // Set the currently selected language
+let LANG_SEL = "it"; // CHANGE HERE IF YOU WANT TO CHANGE THE DEFAULT LANGUAGE TO en
 
 boxes.forEach(box => {
     box.addEventListener('click', () => {
