@@ -23,7 +23,7 @@ function goToMoreInfo(value) {
     clearTimeout(removeDescriptionTimeOut);
 
     document.querySelector('.top').scrollIntoView({behavior: 'smooth'});
-    document.getElementById('more-info').scrollIntoView({behavior: 'smooth'});
+    document.querySelector('.back-to-top:not(.disabled)').scrollIntoView({behavior: 'smooth'});
 
     for (let i = 0; i < content_description.length; i++) {
         const desc = content_description[i];

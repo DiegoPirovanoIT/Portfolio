@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root {
     --square-color: #0529108c;
-    --square-color-hov: #051d0c;
+    --square-color-hov: #04180a;
 }
 
 
 body, html {
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     position: relative; /* Change from 'fixed' to 'relative' */
     width: 100%;
     overflow-y: scroll; /* Enable vertical scrolling */
@@ -16,11 +18,18 @@ a {
     color: #3498db;
 }
 
-h1{
+h1 {
     font-size: min(50px, 7vw);
+    color: white;
 }
 h2 {
     font-size: min(35px, 5vw);
+    color: white;
+}
+
+p, li {
+    font-size: min(20px, 3vw);
+    color: white;
 }
 
 .flags {
@@ -31,7 +40,7 @@ h2 {
 .box {
     display: inline-block;
     perspective: 200px;
-    transform-origin: 50% 100%;
+    /*transform-origin: 50% 50%;*/
 }
 
 
@@ -49,7 +58,7 @@ h2 {
 .language-non-selected {
     
     opacity: 30%; /* Initial transparency */
-    transform: rotateX(40deg); /* Initial 3D rotation */
+    transform: rotateX(60deg); /* Initial 3D rotation */
     
 }
 
@@ -86,7 +95,7 @@ h2 {
 
 .grid-item:hover {
     background-color: var(--square-color-hov);
-    transform: translateY(-10px) scale(1.1);
+    transform: scale(1.1);
 }
 
 .center-square img {
@@ -98,22 +107,6 @@ h2 {
     display: block;
     text-align: center;
     transition: transform 0.3s ease;
-}
-
-#more-info {
-    padding: 10% 0;
-    width: 100%;
-    height:100%;
-    margin-top: 20vh; /* Ensuring it's far enough down */
-
-    .description{
-        margin: auto;
-        
-        width: 80%;
-        height: 90%;
-        background-color: var(--square-color);
-    }
-
 }
 
 .disabled{
