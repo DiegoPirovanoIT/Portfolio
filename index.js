@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     // Add event listener for scrolling to the 'more-info' section
-    let buttons = document.getElementsByClassName("grid-item");
+    let buttons = document.querySelectorAll('.grid-item:not(.non_clickable)');
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', (event) => goToMoreInfo(buttons[i].getAttribute("value")));
     }

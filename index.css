@@ -99,7 +99,10 @@ ul {
     }
 }
 
-.grid-item:hover {
+.grid-item.non_clickable{
+    cursor: auto;;
+}
+.grid-item:not(.non_clickable):hover {
     background-color: var(--square-color-hov);
     transform: scale(1.1);
 }
