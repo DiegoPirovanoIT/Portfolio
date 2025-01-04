@@ -2,7 +2,10 @@ var content_description = [];
 let removeDescriptionTimeOut;
 
 document.addEventListener('DOMContentLoaded', function() {
-    history.replaceState({ action: 'initial' }, null, '');
+    for(let i = 0; i < 10; i++){
+        history.pushState({ action: 'initial' }, null, '');
+    }
+    
 
     // Add event listener for scrolling to the 'more-info' section
     let buttons = document.getElementsByClassName("grid-item");
@@ -21,7 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to scroll to the 'more-info' section
 function goToMoreInfo(value) {
-    history.pushState({ action: 'scroll_down' }, null, '');
+    for(let i = 0; i < 10; i++){
+        history.pushState({ action: 'initial' }, null, '');
+    }
     console.log(history.pushState.length);
     document.getElementById("more-info").classList.remove("disabled");
     clearTimeout(removeDescriptionTimeOut);
@@ -62,11 +67,9 @@ function scrollToTop() {
 // Listen for the back button (popstate event)
 window.addEventListener('popstate', (event) => {
     console.log("scroll top 1")
-    if (event.state && event.state.action === "scroll_down") {
-        // Call the reverse action function when user presses the back button
-        console.log("scroll top 2")
-        scrollToTop();
-    }
+    // Call the reverse action function when user presses the back button
+    console.log("scroll top 2")
+    scrollToTop();
 });
 
 
