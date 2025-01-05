@@ -18,6 +18,7 @@ boxes.forEach(box => {
 
 
 function cambiaLingua(){
+    
     if(LANG_SEL == "it"){
         testi_italiani.forEach(t => {
             t.classList.remove("disabled")
@@ -34,6 +35,11 @@ function cambiaLingua(){
             t.classList.remove("disabled")
         });
     }
+    /*
+    deleteVideo();
+    playAgain();
+    */
+    
 }
 
 boxes.forEach(box => {

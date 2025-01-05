@@ -31,16 +31,18 @@
         <div class="grid-item" value="Contatti">
             <h2>Contatti</h2>
         </div>
-        <div class="grid-item" value="Progetti">
-            <h2>Progetti</h2>
+        <div class="grid-item" value="CV">
+            <h2>Il mio CV</h2>
         </div>
 
         <div class="grid-item" value="CompetenzeDigitali" onclick="showSlide(3)">
             <h2>Competenze digitali</h2>
         </div>
         <div class="grid-item non_clickable center-square scale-up-ver-top">
-            <img src="img/FotoTesseraNoSfondo.png" alt="Foto tessera">
+            <div class="iframe_container" id="iframe_container_it"></div>
+
             <h1>Diego Pirovano</h1>
+            <button class="play-again it" id="play_again_it">Play again</button> <!-- Back to top button en-->
         </div>
         <div class="grid-item" value="Competenze-linguistiche">
             <h2>Competenze linguistiche</h2>
@@ -65,16 +67,19 @@
         <div class="grid-item" value="Contatti">
             <h2>Contacts</h2>
         </div>
-        <div class="grid-item" value="Progetti">
-            <h2>Projects</h2>
+        <div class="grid-item" value="CV">
+            <h2>My CV</h2>
         </div>
 
         <div class="grid-item" value="CompetenzeDigitali" onclick="showSlide(3)">
             <h2>Digital Skills</h2>
         </div>
         <div class="grid-item non_clickable center-square scale-up-ver-top">
-            <img src="img/FotoTesseraNoSfondo.png" alt="Foto tessera">
+
+            <div class="iframe_container" id="iframe_container_en"></div>
+
             <h1>Diego Pirovano</h1>
+            <button class="play-again en" id="play_again_en">Play again</button> <!-- Back to top button en-->
         </div>
         <div class="grid-item" value="Competenze-linguistiche">
             <h2>Language Skills</h2>
@@ -480,10 +485,7 @@
                 </p>
                 <p>
                     Il secondo serviva per permettere a tutti i clienti di firmare la liberatoria di scarico
-                    responsabilità
-                    per la sauna e i massaggi. Le liberatorie vengono poi automaticamente inviate su un server discord.
-                    Una copia della pagina è accessibile attraverso
-                    <a href="https://diegopirovanoit.github.io/ModuloFacile/" target="_blank">questo link</a>
+                    responsabilità. Le liberatorie vengono poi automaticamente inviate su un server discord.
                 </p>
                 <p>Entrambe le piattaforme sono state realizzate attraverso html, css e javascript per il fron-end,
                     mentre ho utilizzato python con la libreria Flask per gestire il backend.
@@ -495,9 +497,8 @@
                     In 2023, I developed two web platforms for a wellness center.
                     The first platform was designed to collect reviews from various customers and can be accessed
                     <a href="https://diegopirovanoit.github.io/Libro_dell_ospite/" target="_blank">at this link</a>.
-                    The second platform allowed clients to sign liability waivers for the sauna and massages.
-                    These waivers were then automatically sent to a Discord server. You can find a copy of the
-                    website <a href="https://diegopirovanoit.github.io/ModuloFacile/" target="_blank">here</a>
+                    The second platform allowed clients to sign waivers of responsability.
+                    These waivers were then automatically sent to a Discord server.
                 </p>
                 <p>Both platforms were created using HTML, CSS, and JavaScript for the front-end,
                     while I used Python with the Flask library to manage the back-end.
@@ -505,6 +506,7 @@
             </div>
 
         </div>
+
         <button class="back-to-top it">Indietro</button> <!-- Back to top button ita-->
         <button class="back-to-top en">Back</button> <!-- Back to top button en-->
 
@@ -514,6 +516,7 @@
 
     <script src="index.js"></script>
     <script src="language.js"></script>
+    <!--<script src="ytIframe.js"></script> -->
     <script src="competenze_digitali.js"></script>
 </body>
 

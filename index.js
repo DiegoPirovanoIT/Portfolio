@@ -1,11 +1,11 @@
 var content_description = [];
 let removeDescriptionTimeOut;
 
-document.addEventListener('DOMContentLoaded', function() {
-    for(let i = 0; i < 10; i++){
+document.addEventListener('DOMContentLoaded', function () {
+    for (let i = 0; i < 10; i++) {
         history.pushState({ action: 'initial' }, null, '');
     }
-    
+
 
     // Add event listener for scrolling to the 'more-info' section
     let buttons = document.querySelectorAll('.grid-item:not(.non_clickable)');
@@ -24,27 +24,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to scroll to the 'more-info' section
 function goToMoreInfo(value) {
-    for(let i = 0; i < 10; i++){
-        history.pushState({ action: 'initial' }, null, '');
-    }
-    console.log(history.pushState.length);
-    document.getElementById("more-info").classList.remove("disabled");
-    clearTimeout(removeDescriptionTimeOut);
-
-    document.querySelector('.top').scrollIntoView({behavior: 'smooth'});
-    document.querySelector('.back-to-top:not(.disabled)').scrollIntoView({behavior: 'smooth'});
-
-    for (let i = 0; i < content_description.length; i++) {
-        const desc = content_description[i];
-        if (desc.classList.contains(value)) {
-            desc.classList.remove('disabled');
+    if (value == "CV") {
+        if (LANG_SEL === "it") {
+            // Open the Italian CV in a new tab
+            window.open("doc/Pirovano Diego CV ITA.pdf", "_blank");
         } else {
-            desc.classList.add('disabled');
+            // Open the English CV in a new tab
+            window.open("doc/Pirovano Diego CV EN.pdf", "_blank");
         }
     }
+    else {
+        for (let i = 0; i < 10; i++) {
+            history.pushState({ action: 'initial' }, null, '');
+        }
+        console.log(history.pushState.length);
+        document.getElementById("more-info").classList.remove("disabled");
+        clearTimeout(removeDescriptionTimeOut);
+
+        
+
+        for (let i = 0; i < content_description.length; i++) {
+            const desc = content_description[i];
+            if (desc.classList.contains(value)) {
+                desc.classList.remove('disabled');
+            } else {
+                desc.classList.add('disabled');
+            }
+        }
+
+
+        document.querySelector('.back-to-top:not(.disabled)').scrollIntoView({ behavior: 'smooth', block: "center" });
+    }
+
 }
 
-function removeDescription(){
+function removeDescription() {
     document.getElementById("more-info").classList.add("disabled");
     for (let i = 0; i < content_description.length; i++) {
         const desc = content_description[i];
