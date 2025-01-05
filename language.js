@@ -1,7 +1,11 @@
+let LANG_SEL = "it"; // CHANGE HERE IF YOU WANT TO CHANGE THE DEFAULT LANGUAGE TO en
+
+
 const boxes = document.querySelectorAll('.box'); // Target the parent boxes
 const testi_italiani = document.querySelectorAll(".it")
 const testi_inglesi = document.querySelectorAll(".en")
-let LANG_SEL = "it"; // CHANGE HERE IF YOU WANT TO CHANGE THE DEFAULT LANGUAGE TO en
+
+
 
 boxes.forEach(box => {
     box.addEventListener('click', () => {
@@ -12,14 +16,14 @@ boxes.forEach(box => {
         LANG_SEL = selectedLanguage;
 
         cambiaLingua();
-        
+
     });
 });
 
 
-function cambiaLingua(){
-    
-    if(LANG_SEL == "it"){
+function cambiaLingua() {
+
+    if (LANG_SEL == "it") {
         testi_italiani.forEach(t => {
             t.classList.remove("disabled")
         });
@@ -27,7 +31,7 @@ function cambiaLingua(){
             t.classList.add("disabled")
         });
     }
-    else{
+    else {
         testi_italiani.forEach(t => {
             t.classList.add("disabled")
         });
@@ -35,11 +39,11 @@ function cambiaLingua(){
             t.classList.remove("disabled")
         });
     }
-    
+
     deleteVideo();
     playAgain();
 
-    
+
 }
 
 boxes.forEach(box => {
@@ -71,6 +75,7 @@ boxes.forEach(box => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+
     cambiaLingua();
 });
