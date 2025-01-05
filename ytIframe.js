@@ -29,6 +29,7 @@ function deleteVideo() {
         iframe.remove();
     }
 }
+
 // This function is triggered when the state of the player changes
 function onPlayerStateChange(event) {
     if (event.data === YT.PlayerState.ENDED) {
@@ -37,6 +38,7 @@ function onPlayerStateChange(event) {
 
         // Show the "Play Again" button after the video ends
         LANG_SEL === "it" ? document.getElementById('play_again_it').style.display = 'block' : document.getElementById('play_again_en').style.display = 'block';
+        LANG_SEL === "it" ? document.getElementById('foto_tessera_it').style.display = 'block' : document.getElementById('foto_tessera_en').style.display = 'block';
     }
 }
 
@@ -68,7 +70,8 @@ function playAgain() {
         // Hide the "Play Again" button
         document.getElementById('play_again_it').style.display = 'none';
         document.getElementById('play_again_en').style.display = 'none';
-
+        document.getElementById('foto_tessera_it').style.display = 'none';
+        document.getElementById('foto_tessera_en').style.display = 'none';
         // Wait for the API to be ready and then initialize the player
         if (isAPIReady) {
             createPlayer(); // Create the player again after iframe is added

@@ -144,7 +144,7 @@ ul {
     outline-offset: 0;
     outline-color: rgba(206, 0, 0, 0.75);
     outline-style: solid;
-    animation: animateOutline 1.5s ease infinite;
+    animation: animateOutline 1.5s ease;
 }
 
 @keyframes animateOutline {

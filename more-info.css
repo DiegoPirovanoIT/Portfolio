@@ -130,7 +130,7 @@
 
 
 /* PULSANTE TORNA INDIETRO */
-.back-to-top {
+.back-to-top, .play-again {
     margin-top: 3%;
     align-items: center;
     appearance: none;
@@ -161,17 +161,21 @@
     font-size: 30px;
 }
 
-.back-to-top:focus {
+.play-again{
+    font-size: 20px;
+}
+
+.back-to-top:focus, .play-again:focus {
     box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
 }
 
-.back-to-top:hover {
+.back-to-top:hover, .play-again:hover {
     box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
     transform: translateY(-20%);
     /* Combine both */
 }
 
-.back-to-top:active {
+.back-to-top:active, .play-again:active {
     box-shadow: #3c4fe0 0 3px 7px inset;
     transform: translateY(20%);
     /* Combine both */

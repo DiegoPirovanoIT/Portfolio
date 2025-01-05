@@ -35,10 +35,10 @@ function cambiaLingua(){
             t.classList.remove("disabled")
         });
     }
-    /*
+    
     deleteVideo();
     playAgain();
-    */
+
     
 }
 
