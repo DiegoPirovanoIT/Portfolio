@@ -132,10 +132,10 @@ ul {
     transition: transform 0.3s ease;
 }
 
-.iframe-container{
-    width: 95%;
+.iframe_container iframe{
+    width: 85%;
     height: 60%;
-    min-width: 500px;
+    min-width: 450px;
     min-height: 330px;
 }
 /* focus with border animation */

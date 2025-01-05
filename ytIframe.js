@@ -60,10 +60,11 @@ function playAgain() {
         iframe.title = "Portfolio Introduction";
         iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media;";
         iframe.referrerPolicy = "strict-origin-when-cross-origin";
+        iframe.setAttribute("allowfullscreen", "");
 
         // Set the width and height of the iframe directly in JavaScript
         iframe.style.width = "100%"; // Set width to 95% of the container
-        iframe.style.height = "10S0%"; // Set height to 60% of the container
+        iframe.style.height = "100%"; // Set height to 60% of the container
 
         iframeContainer.appendChild(iframe);
 
