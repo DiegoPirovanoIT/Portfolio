@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --square-color: #052910dc;
+    --square-color: #0a463c;
     --square-color-hov: #04180a;
 }
 
@@ -15,6 +15,7 @@ html {
     width: 100%;
     overflow-y: scroll;
     /* Enable vertical scrolling */
+    background-color: #cdffd7;
 }
 
 a {
@@ -72,7 +73,7 @@ ul {
 
     opacity: 30%;
     /* Initial transparency */
-    transform: rotateX(60deg);
+    transform: rotateX(40deg);
     /* Initial 3D rotation */
 
 }
@@ -122,7 +123,7 @@ ul {
 }
 
 .center-square img {
-    width: 40%;
+    width: 30%;
     border-radius: 25px;
 }
 
